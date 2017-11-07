@@ -1,0 +1,23 @@
+{
+  "name": "monkey-around",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramiz-Khan/MonkeyAround.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ramiz-Khan/MonkeyAround/issues"
+  },
+  "homepage": "https://github.com/Ramiz-Khan/MonkeyAround#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mysql": "^2.15.0"
+  }
+}
