@@ -1,37 +1,21 @@
 {
-<<<<<<< HEAD
-  "name": "monkey-around",
-=======
   "name": "chat",
->>>>>>> 7c4e0c3c7f297ebe31ff035933bc2b9347fa53c0
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-<<<<<<< HEAD
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ramiz-Khan/MonkeyAround.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ramiz-Khan/MonkeyAround/issues"
-  },
-  "homepage": "https://github.com/Ramiz-Khan/MonkeyAround#readme",
-  "dependencies": {
-    "express": "^4.16.2",
-    "mysql": "^2.15.0"
-=======
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
     "mysql2": "^1.4.2",
     "sequelize": "^4.22.5",
     "sequelize-cli": "^3.0.0"
->>>>>>> 7c4e0c3c7f297ebe31ff035933bc2b9347fa53c0
   }
 }
