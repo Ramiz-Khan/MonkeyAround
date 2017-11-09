@@ -3,6 +3,7 @@
 var express = require("express");
 var sequelize = require("sequelize");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 
 //setup express app
@@ -28,7 +29,7 @@ app.get("/login", function (req, res) {
 });
 
 app.get("/home", function (req, res) {
-    console.log("home");
+    res.sendFile(path.join(__dirname, '/public', 'index.html'));
 });
 
 app.get("/api/home", function (req, res) {
