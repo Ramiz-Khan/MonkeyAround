@@ -10,7 +10,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 //require db and models to sync
-var db = require("./models");
+//var db = require("./models");
 
 //Express handles body parsing
 app.use(bodyParser.urlencoded({ extended: false }));
