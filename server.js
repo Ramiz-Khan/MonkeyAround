@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 //require db and models to sync
-//var db = require("./models");
+var db = require("./models");
 
 //Express handles body parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -47,8 +47,8 @@ app.get("/api/user/:id", function (req, res) {
 
 
 //sync sequelize then start express
-//db.sequelize.sync().then(function() {    
+db.sequelize.sync().then(function() {    
     app.listen(PORT, function () {
         console.log("🌎  You're listening on port: " + PORT);
     });
-//});
+});
