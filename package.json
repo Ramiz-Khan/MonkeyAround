@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,14 @@
     "path": "^0.12.7",
     "sequelize": "^4.22.5",
     "sequelize-cli": "^3.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramiz-Khan/MonkeyAround.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramiz-Khan/MonkeyAround/issues"
+  },
+  "homepage": "https://github.com/Ramiz-Khan/MonkeyAround#readme"
 }
