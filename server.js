@@ -13,13 +13,13 @@ var app = express();
 //require db and models to sync
 var db = require("./models");
 
+// Set Handlebars.
+var exphbs = require("express-handlebars");
+
 //Express handles body parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
-
-// Set Handlebars.
-var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
@@ -28,7 +28,7 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controller/gamesController.js");
 
-app.use("/", routes);
+//app.use("/", routes);
 
 //routes - to be replaced by requiring route files
 app.get("/", function (req, res) {
