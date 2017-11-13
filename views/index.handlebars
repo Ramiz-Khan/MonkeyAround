@@ -1,0 +1,11 @@
+<h1>Join a game!!</h1>
+
+<h2>Open games to join!</h2>
+
+<ul>
+  {{#each games}}
+    {{#unless closed}}
+      {{> games/game-status open=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
