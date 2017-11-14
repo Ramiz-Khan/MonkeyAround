@@ -1,11 +1,50 @@
-<h1>Join a game!!</h1>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Monkey Around</a>
 
-<h2>Open games to join!</h2>
+    </div>
 
-<ul>
-  {{#each games}}
-    {{#unless closed}}
-      {{> games/game-status open=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="/signin">Login</a>
+        </li>
+        <li>
+          <a href="/signup">Sign-Up</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+
+<!-- Demo Header -->
+
+<div id="slider">
+ 
+  <header>Cool slogan here!
+ 
+ <figure>
+		<img src="https://wallpaperclicker.com/storage/wallpaper/soccer-field-wallpaper-images-28421782.jpg">
+		<img src="http://ak4.picdn.net/shutterstock/videos/12364934/thumb/1.jpg">
+		<img src="https://www.smu.edu/-/media/Site/Events/Event-Services/Banner-images/Moody-in-play.ashx?h=333&w=500&la=en">
+		<img src="https://mylocalnews.us/newyork/wp-content/uploads/sites/53/2017/09/3_Behind_Home_Plate_tu0vdmip_d46qrvjf.jpg">	
+ </figure>
+ </header>
+</div>

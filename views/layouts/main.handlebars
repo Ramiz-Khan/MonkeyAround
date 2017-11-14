@@ -1,67 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monkey Around</title>
+    <link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
-		<link rel="stylesheet" href="calendar/calendar.css" />
-		<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
-		<!-- Update your html tag to include the itemscope and itemtype attributes. -->
-		<html itemscope itemtype="http://schema.org/Type">
-		<link rel="shortcut icon" href="/assets/img/mkyArnd.png" />
-		<!-- Place this data between the <head> tags of your website -->
-		<title>Monkey Around</title>
-		<meta name="description" content="Scheduler, Reservation, Application for making events" />
-		<meta name="keywords" content="HTML,CSS,XML,JavaScript,Scedulizer,Scheduler,Reservation,Reservations,Dates,Daten,Datener,Date Maker,Evenet,Eventor,Eventenier,Event Maker,Plan Picker,Planner,Plan Manager,Ferris ScheDuler's Day off,">
-		<meta name="author" content="Gerardo Mestanza, Matthew Mandel, Stefanie Ding, Kevin Ding">
-
-		<!-- Schema.org markup for Google+ -->
-		<meta itemprop="name" content="Rooster Booster">
-		<meta itemprop="description" content="Sequelize Schedule Booster">
-		<meta itemprop="image" content="/assets/img/mkyArnd.png">
-
-		<!-- Twitter Card data -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@twitterhandle">
-		<meta name="twitter:title" content="Rooster Booster">
-		<meta name="twitter:description" content="Sequelize Schedule Booster">
-		<meta name="twitter:creator" content="@twitterhandle">
-		<meta name="twitter:image" content="/assets/img/mkyArnd.png">
-
-		<!-- Open Graph data -->
-	<!-- 	<meta property="og:title" content="Rooster Booster" />
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://www.example.com" />
-		<meta property="og:image" content="/assets/img/mkyArnd.png" />
-		<meta property="og:description" content="Sequelize Schedule Booster" /> -->
-		<meta property="og:site_name" content="Site name" />
-	</head>
-	<body>
-		<div class="imgMain">
-		  <div id="banner_backdrop">
-		  </div>
-		  <div id="banner_content">
-		  </div>
-		</div>
-
-		{{>logo/logo}}
-
-		{{{ body }}}
-
-		{{>footer/socialbar}}
-
-	</body>
-</HTML>
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="calendar/calendar.js"></script>
-<script>
-var cal = CALENDAR();
-$(document).ready(function() {
-	$("#label").trigger('click');
-});
-cal.init();
-
-</script>
+    <link rel="shortcut icon" href="../public/assets/img/mkyArnd.png" />
+</head>
+<body>
+	{{{ body }}}
+</body>
+</html>
