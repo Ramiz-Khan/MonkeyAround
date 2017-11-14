@@ -1,0 +1,9 @@
+<h1>Your Current Games</h1>
+
+{{#each Games}}
+	{{#if this.user_id = User.id}}
+		<li>
+		{{this.description}}
+		</li>
+	{{/if}}
+{{/each}}

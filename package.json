@@ -4,30 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
-    "handlebars": "^4.0.11",
+    "express-session": "^1.15.6",
     "mysql": "^2.15.0",
     "mysql2": "^1.4.2",
-    "path": "^0.12.7",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^4.22.5",
     "sequelize-cli": "^3.0.0"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ramiz-Khan/MonkeyAround.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Ramiz-Khan/MonkeyAround/issues"
-  },
-  "homepage": "https://github.com/Ramiz-Khan/MonkeyAround#readme"
+  }
 }
