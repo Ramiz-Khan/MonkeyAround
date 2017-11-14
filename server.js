@@ -75,7 +75,7 @@ models.sequelize.sync().then(function() {
  
 });
 //setup express app
-var PORT = process.env.NODE_ENV || 'development';
+var PORT = process.env.NODE_ENV || 8080;
 
 
 
