@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.set('views', './views')
 app.engine('handlebars', exphbs({
-    extname: '.handlebars'
+    defaultLayout: 'main'
 }));
 app.set('view engine', 'handlebars');
 
@@ -23,15 +23,11 @@ app.use(passport.initialize());
  
 app.use(passport.session());
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/gamesController.js");
-
-//app.use("/", routes);
+app.use(express.static(path.join(__dirname, '/public')));
 
 //routes - to be replaced by requiring route files
 app.get("/", function (req, res) {
-    console.log("landingpage");
-    res.sendFile(path.join(__dirname, '/public', 'index.html'));
+    res.render("index");
 });
 
 app.get("/login", function (req, res) {
