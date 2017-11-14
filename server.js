@@ -45,10 +45,6 @@ app.get("/api/home", function (req, res) {
 app.get("/api/user", function (req, res) {
     res.json();
 });
-
-app.get("/api/user/:id", function (req, res) {
-    res.json();
-});
  
  
 //app.get('/', function(req, res) {
@@ -59,6 +55,13 @@ app.get("/api/user/:id", function (req, res) {
 
 //Models
 var models = require("./models");
+
+app.post("/creategame", function(req,res){
+    req.body.user_id = req.user.id;
+    models.Games.create(req.body).then(function(dbPost){
+        res.json(dbPost);
+    })
+})
 
 var authRoute = require('./routes/auth.js')(app, passport);
 
