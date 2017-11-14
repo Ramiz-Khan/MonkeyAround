@@ -7,7 +7,7 @@ var path = require("path");
 
 
 //setup express app
-var PORT = process.env.NODE_ENV || 8080;
+var PORT = process.env.PORT || 8080;
 var app = express();
 
 //require db and models to sync
