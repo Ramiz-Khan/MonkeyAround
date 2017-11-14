@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "pieeater",
+    "password": "252810Rak",
     "database": "chat",
     "host": "localhost",
     "dialect": "mysql"
@@ -14,11 +14,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable":"Jaws_URL",
-    "dialect": "mysql",
+    "use_env_variable":"JAWSDB_URL",
+    "JAWSDB_URL": "mysql://gd6bxcky15zb4v9a:u127z0n8lsyvrdlb@yhrz9vns005e0734.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ol7e40wc5q43uiq3",
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1"
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
 }
