@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "252810Rak",
-    "database": "MA_DB",
+    "password": "null",
+    "database": "chat",
     "host": "localhost",
     "dialect": "mysql"
   },
