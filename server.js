@@ -1,32 +1,30 @@
-
-//dependencies
-var express = require("express");
-var sequelize = require("sequelize");
-var bodyParser = require("body-parser");
-var path = require("path");
-
-
-//setup express app
-var PORT = process.env.PORT || 8080;
+var express = require('express');
 var app = express();
+var passport   = require('passport')
+var session    = require('express-session')
+var bodyParser = require('body-parser')
+var exphbs = require('express-handlebars')
+var path= require("path");
 
-//require db and models to sync
-var db = require("./models");
-
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-
-//Express handles body parsing
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static("public"));
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.set('views', './views')
+app.engine('handlebars', exphbs({
+    extname: '.handlebars'
+}));
+app.set('view engine', 'handlebars');
 
+// For Passport
+ 
+app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+ 
+app.use(passport.initialize());
+ 
+app.use(passport.session());
 
 // Import routes and give the server access to them.
-var routes = require("./controller/gamesController.js");
+var routes = require("./controllers/gamesController.js");
 
 //app.use("/", routes);
 
@@ -55,11 +53,38 @@ app.get("/api/user", function (req, res) {
 app.get("/api/user/:id", function (req, res) {
     res.json();
 });
+ 
+ 
+//app.get('/', function(req, res) {
+ 
+//    res.render("index");
+ 
+//});
+
+//Models
+var models = require("./models");
+
+var authRoute = require('./routes/auth.js')(app, passport);
+
+require('./config/passport/passport.js')(passport, models.User);
+ 
+//Sync Database
+models.sequelize.sync().then(function() {
+ 
+    console.log('Nice! Database looks fine')
+ 
+}).catch(function(err) {
+ 
+    console.log(err, "Something went wrong with the Database Update!")
+ 
+});
+//setup express app
+var PORT = process.env.PORT || 8080;
 
 
 
 //sync sequelize then start express
-db.sequelize.sync().then(function() {    
+models.sequelize.sync().then(function() {    
     app.listen(PORT, function () {
         console.log("🌎  You're listening on port: " + PORT);
     });
