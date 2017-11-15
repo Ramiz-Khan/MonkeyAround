@@ -45,13 +45,6 @@ app.get("/api/home", function (req, res) {
 app.get("/api/user", function (req, res) {
     res.json();
 });
- 
- 
-//app.get('/', function(req, res) {
- 
-//    res.render("index");
- 
-//});
 
 //Models
 var models = require("./models");
@@ -59,7 +52,7 @@ var models = require("./models");
 app.post("/creategame", function(req,res){
     req.body.user_id = req.user.id;
     models.Games.create(req.body).then(function(dbPost){
-        res.json(dbPost);
+        res.redirect("dashboard");
     })
 })
 

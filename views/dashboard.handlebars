@@ -32,6 +32,44 @@
 </nav>
 
 <div class="container">
-  <a href="/creategame"><button>Create Game</button></a>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      My Games
+      <a href="/creategame"><button>Create Game</button></a>
+    </div>
+    <div class="panel-body">
+      <ul>
+      {{#if userGame}}
+        {{#each Games}}
+            <li>
+               Creator: {{creator}} |
+                Sport: {{sport}} |
+                City: {{city}} |
+                Description{{description}}
+            </li>
+        {{/each}}
+      {{/if}}
+      </ul>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Available Games</div>
+      <div class="panel-body">
+        <ul>
+        {{#unless userGame}}
+          {{#each Games}}
+              <li>
+                Creator: {{creator}} |
+                Sport: {{sport}} |
+                City: {{city}} |
+                Description{{description}}
+              </li>
+          {{/each}}
+        {{/unless}}
+        </ul>
+      </div>
+    </div>
 </div>
 

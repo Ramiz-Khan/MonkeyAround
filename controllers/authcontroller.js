@@ -1,4 +1,6 @@
 var exports = module.exports = {}
+
+var models = require("../models");
  
 exports.signup = function(req, res) {
  
@@ -12,8 +14,24 @@ exports.signin = function(req, res) {
 }
 
 exports.dashboard = function(req, res) {
- 
-    res.render('dashboard');
+
+	models.Games.findAll().then(function(done){
+		var userGame = false;
+		for (var i = 0; i < done.length; i++) {
+			if (done[i].user_id == req.user.id){
+				userGame = true;
+			}
+			else{
+				userGame = false;
+			}
+		}
+		var hbrsObject = {
+			Games: done,
+			userGame : userGame
+		}
+		console.log(hbrsObject);
+	    res.render("dashboard", hbrsObject);
+	})
  
 }
 
