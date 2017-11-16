@@ -33,6 +33,10 @@ module.exports = function(sequelize, DataTypes){
 		currentplayers: {
 			type: DataTypes.INTEGER,
 			defaultValue: 1
+		},
+		usergame: {
+			type: DataTypes.BOOLEAN,
+			defaultValue: false
 		}
 	});
 

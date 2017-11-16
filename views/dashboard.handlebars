@@ -35,21 +35,21 @@
 
   <div class="panel panel-default">
     <div class="panel-heading">
-      My Games
+      My Games |
       <a href="/creategame"><button>Create Game</button></a>
     </div>
     <div class="panel-body">
       <ul>
-      {{#if userGame}}
         {{#each Games}}
+          {{#if usergame}}
             <li>
                Creator: {{creator}} |
                 Sport: {{sport}} |
                 City: {{city}} |
                 Description{{description}}
             </li>
+          {{/if}}
         {{/each}}
-      {{/if}}
       </ul>
     </div>
   </div>
@@ -58,16 +58,16 @@
       <div class="panel-heading">Available Games</div>
       <div class="panel-body">
         <ul>
-        {{#unless userGame}}
           {{#each Games}}
+            {{#unless usergame}}
               <li>
                 Creator: {{creator}} |
                 Sport: {{sport}} |
                 City: {{city}} |
                 Description{{description}}
               </li>
+            {{/unless}}
           {{/each}}
-        {{/unless}}
         </ul>
       </div>
     </div>

@@ -16,13 +16,14 @@ exports.signin = function(req, res) {
 exports.dashboard = function(req, res) {
 
 	models.Games.findAll().then(function(done){
-		var userGame = false;
+		var userGame;
+		var otherGame;
 		for (var i = 0; i < done.length; i++) {
 			if (done[i].user_id == req.user.id){
-				userGame = true;
+				done[i].usergame = true;
 			}
 			else{
-				userGame = false;
+				done[i].usergame = false;
 			}
 		}
 		var hbrsObject = {
